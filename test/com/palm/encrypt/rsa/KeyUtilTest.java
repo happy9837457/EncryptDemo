@@ -1,10 +1,8 @@
-package com.java.demo.encrypt.rsa;
+package com.palm.encrypt.rsa;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.palm.encrypt.rsa.KeyUtil;
 
 public class KeyUtilTest {
 
