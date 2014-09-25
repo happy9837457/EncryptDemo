@@ -1,6 +1,5 @@
 package com.palm.encrypt.rsa;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
@@ -14,9 +13,6 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 import org.apache.commons.codec.binary.Base64;
-
-import com.palm.encrypt.util.Const;
-import com.palm.encrypt.util.FileUtil;
 
 /**
  * rsa数字签名
@@ -32,9 +28,8 @@ public class RsaSignDemo {
 	 * @param data
 	 * @return
 	 */
-	public String sign(String data) {
+	public String sign(String data, String privateKey) {
 		try {
-			String privateKey = FileUtil.read(Const.PRIVATE_PATH);
 			Signature sig = Signature.getInstance("SHA1WithRSA");
 			PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(
 					Base64.decodeBase64(privateKey));
@@ -54,8 +49,6 @@ public class RsaSignDemo {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		return null;
 	}
@@ -67,9 +60,8 @@ public class RsaSignDemo {
 	 * @param signData
 	 * @return
 	 */
-	public boolean verify(String signText, String signData) {
+	public boolean verify(String signText, String signData, String publicKey) {
 		try {
-			String publicKey = FileUtil.read(Const.PUBLIC_PATH);
 			Signature sig = Signature.getInstance("SHA1WithRSA");
 			X509EncodedKeySpec pubX509 = new X509EncodedKeySpec(
 					Base64.decodeBase64(publicKey));
@@ -86,10 +78,6 @@ public class RsaSignDemo {
 		} catch (InvalidKeySpecException e) {
 			e.printStackTrace();
 		} catch (SignatureException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return false;
