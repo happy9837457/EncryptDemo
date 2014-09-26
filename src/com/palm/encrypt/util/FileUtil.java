@@ -1,4 +1,4 @@
-package com.palm.encrypt.jce.util;
+package com.palm.encrypt.util;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

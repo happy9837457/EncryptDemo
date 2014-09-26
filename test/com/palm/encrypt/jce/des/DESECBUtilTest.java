@@ -4,8 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.palm.encrypt.jce.des.DESECBUtil;
-import com.palm.encrypt.jce.util.Const;
+import com.palm.encrypt.util.Const;
 
 public class DESECBUtilTest {
 

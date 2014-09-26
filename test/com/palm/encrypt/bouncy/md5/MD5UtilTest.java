@@ -1,19 +1,18 @@
-package com.palm.encrypt.jce.sha;
+package com.palm.encrypt.bouncy.md5;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SHAUtilTest {
+public class MD5UtilTest {
 
 	@Before
 	public void setUp() throws Exception {
 	}
 
 	@Test
-	public void testSha1() {
-		String origin = "123456";
-		System.out.println(SHAUtil.sha1(origin));
+	public void test() {
+		System.out.println(MD5Util.getMD532("12345"));
 	}
 
 	@After

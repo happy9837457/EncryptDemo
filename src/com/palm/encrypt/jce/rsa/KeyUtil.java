@@ -10,8 +10,8 @@ import java.security.PublicKey;
 
 import org.apache.commons.codec.binary.Base64;
 
-import com.palm.encrypt.jce.util.Const;
-import com.palm.encrypt.jce.util.FileUtil;
+import com.palm.encrypt.util.Const;
+import com.palm.encrypt.util.FileUtil;
 
 /**
  * 生成密钥对

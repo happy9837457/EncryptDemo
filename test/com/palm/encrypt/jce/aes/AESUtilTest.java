@@ -4,8 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.palm.encrypt.jce.aes.AESUtil;
-import com.palm.encrypt.jce.util.Const;
+import com.palm.encrypt.util.Const;
 
 public class AESUtilTest {
 
