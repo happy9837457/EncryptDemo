@@ -18,9 +18,9 @@ public class MD5UtilTest {
 
 	@Test
 	public void testGetMD532() {
-		System.out.println(MD5Util.getInstance().getMD532("中文"));
-		System.out.println(DigestUtils.md5Hex("中文").toUpperCase());// UTF-8编码
-		System.out.println(DigestUtils.md2Hex("中文").toUpperCase());
+		System.out.println(MD5Util.getMD532("中文"));
+		System.out.println(DigestUtils.md5Hex("中文").toUpperCase());// 默认UTF-8编码
+		System.out.println(DigestUtils.md2Hex("中文").toUpperCase());// MD2
 		
 	}
 
