@@ -26,5 +26,5 @@ public class Const {
 	/**
 	 * AES秘钥
 	 */
-	public static final String AES_KEY = "123";
+	public static final String AES_KEY = "123456789";
 }
